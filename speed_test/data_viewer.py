@@ -596,6 +596,7 @@ function renderVideoCharts(idx) {
       labels,
       datasets: [
         { label: 'prefill_all', data: chunks.map(c => g(c,'cost_prefill_all')), borderColor: '#fd79a8', backgroundColor: 'rgba(253,121,168,0.1)', fill: true, tension: 0.3, pointRadius: 2, borderWidth: 2 },
+        { label: 'generate_all', data: chunks.map(c => g(c,'cost_generate_all')), borderColor: '#74b9ff', borderDash: [6,3], tension: 0.3, pointRadius: 2, borderWidth: 2 },
         { label: 'vision_embed (ViT)', data: chunks.map(c => g(c,'cost_vision_embed')), borderColor: '#55efc4', tension: 0.3, pointRadius: 2, borderWidth: 1.5 },
         { label: 'vision_feed', data: chunks.map(c => g(c,'cost_vision_feed')), borderColor: '#a29bfe', tension: 0.3, pointRadius: 2, borderWidth: 1.5 },
         { label: 'audio_feed', data: chunks.map(c => g(c,'cost_audio_feed')), borderColor: '#74b9ff', tension: 0.3, pointRadius: 2, borderWidth: 1.5 },
@@ -622,6 +623,7 @@ function renderVideoCharts(idx) {
       labels,
       datasets: [
         { label: 'generate_all', data: chunks.map(c => g(c,'cost_generate_all')), borderColor: '#74b9ff', backgroundColor: 'rgba(116,185,255,0.1)', fill: true, tension: 0.3, pointRadius: 2, borderWidth: 2 },
+        { label: 'prefill_all', data: chunks.map(c => g(c,'cost_prefill_all')), borderColor: '#fd79a8', borderDash: [6,3], tension: 0.3, pointRadius: 2, borderWidth: 2 },
         { label: 'cost_llm', data: chunks.map(c => g(c,'cost_llm')), borderColor: '#00cec9', tension: 0.3, pointRadius: 2, borderWidth: 1.5 },
         { label: 'cost_tts', data: chunks.map(c => g(c,'cost_tts')), borderColor: '#fdcb6e', tension: 0.3, pointRadius: 2, borderWidth: 1.5 },
         { label: 'cost_token2wav', data: chunks.map(c => g(c,'cost_token2wav')), borderColor: '#a29bfe', tension: 0.3, pointRadius: 2, borderWidth: 1.5 },
